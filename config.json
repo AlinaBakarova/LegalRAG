@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "runtime_path": "runtime.json",
+  "models_lock_path": "models.lock.json",
+  "models_dir": "models",
+  "embedding": {
+    "repository": "intfloat/multilingual-e5-small",
+    "revision": null,
+    "max_parameters": 1000000000,
+    "batch_size": 16,
+    "max_seq_length": 512,
+    "query_prefix": "query: ",
+    "passage_prefix": "passage: "
+  },
+  "retrieval": {
+    "chunk_chars": 1000,
+    "overlap_chars": 160,
+    "candidate_k": 32,
+    "context_chunks": 8,
+    "rrf_k": 60,
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75,
+    "neighbor_radius": 1
+  },
+  "token_margin": 192,
+  "final_max_calls": 2
+}

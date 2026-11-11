@@ -1,0 +1,64 @@
+{
+  "scope": "Real source extraction and BM25 regression; no generator calls",
+  "pdf_sha256": "629f4b668ff43abf2a6e621aefd0f50e165ce8e88c52c05769149e1267d033ec",
+  "backend": "PyMuPDF 1.26.6; fonttools 4.61.1",
+  "schema": "tex-pdf-geometry-v1",
+  "pdf_pages": 147,
+  "source_ids_preserved": true,
+  "gold_and_questions_unchanged": true,
+  "tests": {
+    "tests": 43,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "tested_source_pages": [
+    11,
+    12,
+    13,
+    20,
+    21,
+    31,
+    33,
+    34,
+    36,
+    37,
+    38
+  ],
+  "unknown_math_glyph_warnings": 0,
+  "needs_manual_review_pages": [
+    3,
+    4,
+    9,
+    55,
+    62,
+    71,
+    74,
+    89,
+    130,
+    132,
+    136,
+    137,
+    144
+  ],
+  "manual_review_note": "Remaining vector figures or unassigned rules; this is not a proof of all formula semantics",
+  "corpus_sha256": "68f10ad818ca9e670c1c172163a6dd33ddb4027a4be9e00a0ff87eba1e95060d",
+  "bm25": {
+    "mean_page_evidence_recall_before": 0.6944444444444444,
+    "mean_page_evidence_recall_after": 0.6944444444444444,
+    "full_evidence_questions": 7,
+    "solvable_questions": 12,
+    "chunks": 463,
+    "resources": {
+      "elapsed_seconds": 2.231,
+      "peak_rss_mb": 51.797,
+      "python": "3.11.11",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "machine": "x86_64",
+      "cpu_count": 3
+    },
+    "index_bytes_without_manifest": 2565088
+  },
+  "live_generation_calls": 0,
+  "answer_quality_metrics": null
+}

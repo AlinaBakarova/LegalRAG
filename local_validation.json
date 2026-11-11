@@ -1,0 +1,219 @@
+{
+  "scope": "Actual local checks; no live Qwen experiments",
+  "pytest": {
+    "tests": 26,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "python": "3.11.11",
+    "command": "python -m pytest",
+    "network_disabled_in_tests": true
+  },
+  "cpu_stack_imports": {
+    "torch": "2.9.1+cpu",
+    "transformers": "5.2.0",
+    "sentence-transformers": "5.2.0",
+    "faiss-cpu": "1.13.2",
+    "pydantic": "2.13.4",
+    "httpx": "0.28.1"
+  },
+  "generation_api_calls": 0,
+  "answer_metrics": null,
+  "data": {
+    "corpus_blocks": 147,
+    "dev_questions": 15,
+    "own_questions": 8,
+    "own_categories": {
+      "conditions": 2,
+      "comparison": 2,
+      "calculation": 2,
+      "insufficient": 2
+    },
+    "two_extractions_jsonl_sha256_identical": true,
+    "pdf_sha256": "629f4b668ff43abf2a6e621aefd0f50e165ce8e88c52c05769149e1267d033ec",
+    "file_hashes": {
+      "corpus.jsonl": "9301039a20a6e6ba8c2dc8dd89f6337e8cff82b9d2a49df4ae5613dfe2dbd51f",
+      "dev_gold.jsonl": "6d0b260d96fe52d964472497ade3ee9a769be6b686f8de7950bc1b6ffa50f1c1",
+      "dev_questions.jsonl": "ceee7885ac32780378cb17ef61484b7188c46ba50c690a2ef6c6ac31e9ed1cb3",
+      "own_gold.jsonl": "b12a6bb4bc78109867404b3f12b95326e2a604c92b0fd9be4415dc8f9029d25d",
+      "own_questions.jsonl": "210a82d14de6a6e10989f635373ef3914e0a073c582dbf487e0c992ebd0fa73b"
+    }
+  },
+  "bm25_index": {
+    "schema_version": 1,
+    "corpus_sha256": "9301039a20a6e6ba8c2dc8dd89f6337e8cff82b9d2a49df4ae5613dfe2dbd51f",
+    "index_signature": "7697e34cf4d2ad8f4e3de810e91645ed3c3dd1404f883909e7c46eaa8436a63f",
+    "embedding_revision": null,
+    "embedding_parameters": null,
+    "block_count": 147,
+    "chunk_count": 593,
+    "dense": false,
+    "files": {
+      "blocks.jsonl": "9301039a20a6e6ba8c2dc8dd89f6337e8cff82b9d2a49df4ae5613dfe2dbd51f",
+      "bm25.json": "87715b3491f2197797c4cb641b0363a3bf56a22a422693227ae893a8d34081d5",
+      "chunks.jsonl": "299af72563aaa3b78f7cae22070a7b8d218b34a614e56956175baa694edb90ff"
+    },
+    "resources": {
+      "elapsed_seconds": 10.473,
+      "peak_rss_mb": 55.574,
+      "python": "3.11.11",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "machine": "x86_64",
+      "cpu_count": 3
+    },
+    "index_bytes_without_manifest": 2940906
+  },
+  "retrieval_diagnostic": {
+    "metric": "Page evidence recall in first 8 diverse BM25 candidate windows, before tokenizer packing; not answer accuracy or Q",
+    "solvable_questions": 12,
+    "mean_page_evidence_recall": 0.6944444444444444,
+    "observed_misses": [
+      {
+        "id": "qa_006",
+        "question": "Пусть $\\gamma$ — кусочно-гладкая кривая, а $\\varphi$ непрерывна на ней. Для $z\\notin\\gamma$ положим $F(z)=\\frac{1}{2\\pi i}\\int_\\gamma\\frac{\\varphi(\\zeta)}{\\zeta-z}\\,d\\zeta$. Какие утверждения верны?",
+        "expected_evidence_sets": [
+          [
+            "pdf_629f4b668ff4_p0031",
+            "pdf_629f4b668ff4_p0033"
+          ]
+        ],
+        "retrieved_block_ids": [
+          "pdf_629f4b668ff4_p0081",
+          "pdf_629f4b668ff4_p0031",
+          "pdf_629f4b668ff4_p0046",
+          "pdf_629f4b668ff4_p0042",
+          "pdf_629f4b668ff4_p0026",
+          "pdf_629f4b668ff4_p0056",
+          "pdf_629f4b668ff4_p0041",
+          "pdf_629f4b668ff4_p0066",
+          "pdf_629f4b668ff4_p0044",
+          "pdf_629f4b668ff4_p0043",
+          "pdf_629f4b668ff4_p0030",
+          "pdf_629f4b668ff4_p0045",
+          "pdf_629f4b668ff4_p0067",
+          "pdf_629f4b668ff4_p0028",
+          "pdf_629f4b668ff4_p0065",
+          "pdf_629f4b668ff4_p0068",
+          "pdf_629f4b668ff4_p0121",
+          "pdf_629f4b668ff4_p0076",
+          "pdf_629f4b668ff4_p0064",
+          "pdf_629f4b668ff4_p0027",
+          "pdf_629f4b668ff4_p0126",
+          "pdf_629f4b668ff4_p0093",
+          "pdf_629f4b668ff4_p0106",
+          "pdf_629f4b668ff4_p0038"
+        ],
+        "candidate_context_block_ids": [
+          "pdf_629f4b668ff4_p0081",
+          "pdf_629f4b668ff4_p0031",
+          "pdf_629f4b668ff4_p0046",
+          "pdf_629f4b668ff4_p0042",
+          "pdf_629f4b668ff4_p0026",
+          "pdf_629f4b668ff4_p0056",
+          "pdf_629f4b668ff4_p0041",
+          "pdf_629f4b668ff4_p0066"
+        ],
+        "page_evidence_recall": 0.5
+      },
+      {
+        "id": "qa_007",
+        "question": "Окружность $\\gamma:|z|=1$ обходится один раз против часовой стрелки. Вычислите $\\int_\\gamma e^z/z^3\\,dz$.",
+        "expected_evidence_sets": [
+          [
+            "pdf_629f4b668ff4_p0020",
+            "pdf_629f4b668ff4_p0034"
+          ]
+        ],
+        "retrieved_block_ids": [
+          "pdf_629f4b668ff4_p0040",
+          "pdf_629f4b668ff4_p0094",
+          "pdf_629f4b668ff4_p0105",
+          "pdf_629f4b668ff4_p0060",
+          "pdf_629f4b668ff4_p0073",
+          "pdf_629f4b668ff4_p0145",
+          "pdf_629f4b668ff4_p0137",
+          "pdf_629f4b668ff4_p0117",
+          "pdf_629f4b668ff4_p0090",
+          "pdf_629f4b668ff4_p0118",
+          "pdf_629f4b668ff4_p0028",
+          "pdf_629f4b668ff4_p0089",
+          "pdf_629f4b668ff4_p0143",
+          "pdf_629f4b668ff4_p0063",
+          "pdf_629f4b668ff4_p0072",
+          "pdf_629f4b668ff4_p0068",
+          "pdf_629f4b668ff4_p0146",
+          "pdf_629f4b668ff4_p0071",
+          "pdf_629f4b668ff4_p0136",
+          "pdf_629f4b668ff4_p0029",
+          "pdf_629f4b668ff4_p0021"
+        ],
+        "candidate_context_block_ids": [
+          "pdf_629f4b668ff4_p0040",
+          "pdf_629f4b668ff4_p0094",
+          "pdf_629f4b668ff4_p0105",
+          "pdf_629f4b668ff4_p0060",
+          "pdf_629f4b668ff4_p0073",
+          "pdf_629f4b668ff4_p0145",
+          "pdf_629f4b668ff4_p0137",
+          "pdf_629f4b668ff4_p0117"
+        ],
+        "page_evidence_recall": 0.0
+      },
+      {
+        "id": "qa_012",
+        "question": "Функции f и g целые. Известно, что $f(1/n)=0$ и $g(n)=0$ для всех натуральных $n\\ge1$. Какие утверждения верны?",
+        "expected_evidence_sets": [
+          [
+            "pdf_629f4b668ff4_p0021",
+            "pdf_629f4b668ff4_p0037",
+            "pdf_629f4b668ff4_p0038"
+          ]
+        ],
+        "retrieved_block_ids": [
+          "pdf_629f4b668ff4_p0076",
+          "pdf_629f4b668ff4_p0066",
+          "pdf_629f4b668ff4_p0042",
+          "pdf_629f4b668ff4_p0114",
+          "pdf_629f4b668ff4_p0051",
+          "pdf_629f4b668ff4_p0014",
+          "pdf_629f4b668ff4_p0083",
+          "pdf_629f4b668ff4_p0010",
+          "pdf_629f4b668ff4_p0110",
+          "pdf_629f4b668ff4_p0044",
+          "pdf_629f4b668ff4_p0082",
+          "pdf_629f4b668ff4_p0015",
+          "pdf_629f4b668ff4_p0079",
+          "pdf_629f4b668ff4_p0053",
+          "pdf_629f4b668ff4_p0086",
+          "pdf_629f4b668ff4_p0059",
+          "pdf_629f4b668ff4_p0142",
+          "pdf_629f4b668ff4_p0052",
+          "pdf_629f4b668ff4_p0035",
+          "pdf_629f4b668ff4_p0038",
+          "pdf_629f4b668ff4_p0112",
+          "pdf_629f4b668ff4_p0085",
+          "pdf_629f4b668ff4_p0019",
+          "pdf_629f4b668ff4_p0105",
+          "pdf_629f4b668ff4_p0115"
+        ],
+        "candidate_context_block_ids": [
+          "pdf_629f4b668ff4_p0076",
+          "pdf_629f4b668ff4_p0066",
+          "pdf_629f4b668ff4_p0042",
+          "pdf_629f4b668ff4_p0114",
+          "pdf_629f4b668ff4_p0051",
+          "pdf_629f4b668ff4_p0014",
+          "pdf_629f4b668ff4_p0083",
+          "pdf_629f4b668ff4_p0010"
+        ],
+        "page_evidence_recall": 0.0
+      }
+    ]
+  },
+  "blocked": [
+    "Model download: environment proxy denies Hugging Face (403)",
+    "LLM_BASE_URL, LLM_MODEL, LLM_API_KEY and SUBMISSION_ID are unset",
+    "Immutable embedding/tokenizer revisions and serving quantization/revision need preparation/verification"
+  ],
+  "submission_ready": false
+}

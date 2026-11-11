@@ -1,0 +1,6 @@
+{
+  "status": "not_run",
+  "measured_answer_metrics": false,
+  "reasons": ["No assigned LLM endpoint or credentials provided", "Hugging Face access denied by environment HTTP policy (403)", "Generator and embedding revisions not yet resolved", "Serving model revision and quantization not verified"],
+  "note": "Blank CSV cells are unmeasured values, never zero scores. Mocked API tests are not experiments. dev_answers.jsonl/dev_trace.jsonl will only be exported after actual successful runs."
+}
